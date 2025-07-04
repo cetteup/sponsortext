@@ -82,6 +82,16 @@ func TestPareSponsorTextVariables(t *testing.T) {
 				"teamspeak": "",
 			},
 		},
+		{
+			name:  "returns empty map for empty variables section",
+			given: "$vars:$",
+			want:  map[string]string{},
+		},
+		{
+			name:  "returns nil for sponsor text without variables",
+			given: "Our server is the best!",
+			want:  nil,
+		},
 	}
 
 	for _, tt := range tests {
