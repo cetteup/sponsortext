@@ -9,7 +9,7 @@ An open standard for exposing Refractor 2 server variables via the otherwise unu
 
 ## Background
 
-Neither Battlefield 2 not Battlefield 2142 offer a way of exposing custom variables for a server.
+Neither Battlefield 2 nor Battlefield 2142 offer a way of exposing custom variables for a server.
 Thus, servers cannot (directly) provide information beyond what DICE deemed relevant some 20 years ago.
 In contrast, servers for the equally old Call of Duty games do support adding custom variables.
 The variables allow the games to nicely integrate with modern, web-based server browsers.
