@@ -10,8 +10,9 @@ An open standard for exposing Refractor 2 server variables via the otherwise unu
 
 Neither Battlefield 2 not Battlefield 2142 offer a way of exposing custom variables for a server.
 Thus, servers cannot (directly) provide information beyond what DICE deemed relevant some 20 years ago.
-Servers for the equally old Call of Duty games, which do support adding custom variables, nicely integrate with modern, web-based server browsers.
-[cod.pm](https://cod.pm/faq#6071) uses such custom variables to provide links to a server's Discord, website and/or TeamSpeak server.
+In contrast, servers for the equally old Call of Duty games do support adding custom variables.
+The variables allow the games to nicely integrate with modern, web-based server browsers.
+For example, [cod.pm](https://cod.pm/faq#6071) uses such custom variables to provide links to a server's Discord, website and/or TeamSpeak server.
 
 ## Sponsor text?
 
@@ -34,14 +35,14 @@ Overall, `sv.sponsorText` is perfect because:
 sv.sponsorText "$vars:discord=https://discord.gg/vx4AKRfj;provider=bf2hub.com$"
 ```
 
-### Keys and value
+### Keys and values
 
-The proposed syntax provides a simple key-value syntax.
-Keys and values are considered to always strings.
+The proposed syntax provides a simple key-value structure.
+Keys and values are considered to always be strings.
 Key-value pairs are separated by semicolons.
 Within a pair, key and value are separated by an equal sign.
 Keys may _not_ contain whitespaces.
-Values may contain any printable character, including whitespaces. 
+Values may contain any printable character, including whitespaces.
 
 ### Prefix and optional suffix
 
