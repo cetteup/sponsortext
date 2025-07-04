@@ -131,7 +131,7 @@ $vars:discord=https://discord.gg/vx4AKRfj;provider=bf2hub.com$ Apply to become a
 }
 ```
 
-### Escaped characters
+### Escaped syntax characters
 
 ```
 $vars:\$trange\=key=https://example.com?query\=\$start\;end$
