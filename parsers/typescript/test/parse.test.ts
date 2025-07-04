@@ -79,13 +79,14 @@ describe("parseSponsorTextVariables", () => {
 
     test("omits irrelevant whitespaces", () => {
         // GIVEN
-        const text = "$vars: trimmed = one  two  three $"
+        const text = "$vars: trimmed = one  two  three ; stri pped=four $"
 
         // WHEN
         const variables = parseSponsorTextVariables(text)
 
         expect(variables).toEqual({
             "trimmed": "one two three",
+            "stripped": "four",
         })
     })
 

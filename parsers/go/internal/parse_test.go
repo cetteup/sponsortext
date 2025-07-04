@@ -62,9 +62,10 @@ func TestParseSponsorTextVariables(t *testing.T) {
 		},
 		{
 			name:  "omits irrelevant whitespaces",
-			given: "$vars: trimmed = one  two  three $",
+			given: "$vars: trimmed = one  two  three ; stri pped=four $",
 			want: map[string]string{
-				"trimmed": "one two three",
+				"trimmed":  "one two three",
+				"stripped": "four",
 			},
 		},
 		{

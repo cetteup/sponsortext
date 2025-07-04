@@ -162,14 +162,15 @@ $vars:four-spaces=\ \ \ \ $
 ### Omitted whitespaces
 
 ```
-$vars: trimmed = one  two  three $
+"$vars: trimmed = one  two  three ; stri pped=four $"
 ```
 
 **Equivalent JSON:**
 
 ```json
 {
-  "trimmed": "one two three"
+  "trimmed": "one two three",
+  "stripped": "four"
 }
 ```
 
