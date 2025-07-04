@@ -14,7 +14,7 @@ const (
 	keyValueSeparator separator = '='
 )
 
-func PareSponsorTextVariables(text string) map[string]string {
+func ParseSponsorTextVariables(text string) map[string]string {
 	start := strings.Index(text, prefix)
 	if start == -1 {
 		return nil

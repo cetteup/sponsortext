@@ -24,7 +24,7 @@ func main() {
 			break
 		}
 
-		parsed := internal.PareSponsorTextVariables(scanner.Text())
+		parsed := internal.ParseSponsorTextVariables(scanner.Text())
 
 		b, err := json.MarshalIndent(parsed, "", "  ")
 		if err != nil {
