@@ -65,7 +65,8 @@ func PareSponsorTextVariables(text string) map[string]string {
 	}
 
 	// Add current key-value pair if key was complete (and thus already added to the map)
-	if _, exists := variables[key.String()]; exists {
+	// No need to add an empty value, as we already initialized the key with an empty string
+	if _, exists := variables[key.String()]; exists && value.Len() > 0 {
 		variables[key.String()] = value.String()
 	}
 
