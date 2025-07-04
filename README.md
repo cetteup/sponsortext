@@ -59,6 +59,8 @@ The escaped character will be considered part of the key/value, rather than part
 Whitespaces before, in or after keys must be skipped.
 When parsing a value, leading and trailing whitespaces must be omitted.
 Consecutive whitespaces in values are to be parsed as a single whitespace unless the whitespaces are escaped.
+Incomplete keys (keys not followed by an equal sign) must be skipped.
+Keys without a value are considered present, but empty.
 
 ## Examples
 
@@ -168,6 +170,35 @@ $vars: trimmed = one  two  three $
 ```json
 {
   "trimmed": "one two three"
+}
+```
+
+### Incomplete key
+
+```
+$vars:discord=https://discord.gg/vx4AKRfj;website$
+```
+
+**Equivalent JSON**
+
+```json
+{
+  "discord": "https://discord.gg/vx4AKRfj"
+}
+```
+
+### Key with no value
+
+```
+$vars:discord=https://discord.gg/vx4AKRfj;teamspeak=$
+```
+
+**Equivalent JSON**
+
+```json
+{
+  "discord": "https://discord.gg/vx4AKRfj",
+  "teamspeak": ""
 }
 ```
 
