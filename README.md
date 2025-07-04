@@ -1,6 +1,7 @@
 # sponsortext
 
 ![](https://img.shields.io/badge/status-draft-white)
+![](https://img.shields.io/github/actions/workflow/status/cetteup/sponsortext/test.yml?label=tests)
 ![](https://img.shields.io/badge/game-Battlefield_2-blue)
 ![](https://img.shields.io/badge/game-Battlefield_2142-blue)
 
