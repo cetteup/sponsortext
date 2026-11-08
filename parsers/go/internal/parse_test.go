@@ -69,10 +69,10 @@ func TestParseSponsorTextVariables(t *testing.T) {
 			},
 		},
 		{
-			name:  "ignores incomplete key",
-			given: "$vars:discord=https://discord.gg/vx4AKRfj;website$",
+			name:  "ignores incomplete keys before and after valid variables",
+			given: "$vars:leading;valid=value;trailing$",
 			want: map[string]string{
-				"discord": "https://discord.gg/vx4AKRfj",
+				"valid": "value",
 			},
 		},
 		{

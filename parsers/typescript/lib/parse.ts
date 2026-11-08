@@ -34,6 +34,12 @@ export function parseSponsorTextVariables(text: string): Record<string, string> 
             continue
         }
 
+        // Reset key if we encounter a semicolon while reading a key (incomplete key-value pair)
+        if (!escaped && next == '=' && char == ';') {
+            key = '';
+            continue;
+        }
+
         const marker = !escaped && char == next
         if (marker && next == "=") {
             // Found colon after key, add key to result and switch to reading value
