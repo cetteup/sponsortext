@@ -90,15 +90,16 @@ describe("parseSponsorTextVariables", () => {
         })
     })
 
-    test("ignores incomplete key", () => {
+    test("ignores incomplete keys before and after valid variables", () => {
         // GIVEN
-        const text = "$vars:discord=https://discord.gg/vx4AKRfj;website$"
+        const text = "$vars:leading;valid=value;trailing$"
 
         // WHEN
         const variables = parseSponsorTextVariables(text)
 
+        // THEN
         expect(variables).toEqual({
-            "discord": "https://discord.gg/vx4AKRfj",
+            "valid": "value",
         })
     })
 

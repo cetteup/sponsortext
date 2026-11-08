@@ -41,6 +41,12 @@ func ParseSponsorTextVariables(text string) map[string]string {
 			continue
 		}
 
+		// Reset key if we encounter a semicolon while reading a key (incomplete key-value pair)
+		if !escaped && next == keyValueSeparator && text[i] == uint8(pairSeparator) {
+			key.Reset()
+			continue
+		}
+
 		marker := !escaped && text[i] == uint8(next)
 		if marker && next == keyValueSeparator {
 			// Found colon after key, add key to result and switch to reading value
